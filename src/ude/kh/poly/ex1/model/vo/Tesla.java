@@ -25,6 +25,7 @@ public class Tesla extends Car{ // 전기차
 		this.batteryCapacity = batteryCapacity;
 	}
 	
+	// Car.toString() 오버라이딩
 	@Override
 	public String toString() {
 		return super.toString() + " / " + batteryCapacity;

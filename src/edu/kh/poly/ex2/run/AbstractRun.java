@@ -1,6 +1,7 @@
 package edu.kh.poly.ex2.run;
 
 import ude.kh.poly.ex2.model.service.AbstractService;
+import ude.kh.poly.ex2.model.service.CKYCalculator;
 import ude.kh.poly.ex2.model.service.Calculator;
 
 public class AbstractRun {
@@ -10,11 +11,14 @@ public class AbstractRun {
 		AbstractService service = new AbstractService();
 		
 		//service.ex1();
-		service.ex2();
+		//service.ex2();
 		
-		Calculator cal = new Calculator();
+		Calculator cal = new CKYCalculator();
 		
-		System.out.println("합 : ");
+		System.out.println("합 : " + cal.plus(20, 15));
+		System.out.println("차 : " + cal.minus(20, 15));
+		System.out.println("곱 : " + cal.multiple(20, 15));
+		System.out.println("몫 : " + cal.divide(20, 15));
 		
 		// 인터페이스 == 미완성 설계도 == 객체생성 불가능
 		// -> 추상 클래스처럼 참조 변수로는 사용가능
@@ -33,7 +37,8 @@ public class AbstractRun {
 		
 		// 2) 자식 클래스에 공통된 메서드 구현을 강제하기 때문에
 		// 모든 자식 클래스가 동일한 형태를 띄게 된다.
-		// -> 이를 이용하여 공동 작업(팀 프로젝트)
+		// -> 이를 이용하여 공동 작업(팀 프로젝트)에 필요한
+		// 		개발 환경을 조성할 수 있다.
 	}
 
 }
