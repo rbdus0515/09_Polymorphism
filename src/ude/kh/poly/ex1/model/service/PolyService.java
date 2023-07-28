@@ -154,7 +154,7 @@ public class PolyService {
 		// 다운캐스팅이란?
 		// 부모타입 참조변수가 자식 객체를 참조하는 기술로
 		// 업캐스팅 상태에서만 진행 가능
-		// 부모타입을 자식타음으로 "강제 형변환"해서
+		// 부모타입을 자식타입으로 "강제 형변환"해서
 		// 자식 객체의 본래 필드, 메소드를 사용 가능
 		
 		Car c1 = new Tesla("전기모터", "전기", 4, 10000);
@@ -193,7 +193,7 @@ public class PolyService {
 	public void ex5() {
 		
 		// 바인딩(Biding)
-		// 실제 실행할 메소드 코드와 호출하는 코드를 연결 시키는 
+		// 실제 실행할 메소드 코드와 호출하는 코드를 연결 시키는 것
 		
 		Car c1 = new Car("경유엔진", "경유", 0);
 		System.out.println(c1.getEngine());
@@ -217,6 +217,13 @@ public class PolyService {
 		
 		System.out.println( c2.toString() );
 		// String ude.kh.poly.ex1.model.vo.Car.toString()
+		
+		// 참조변수 c2가 Car타입이므로
+		// toString()eh Car의 toString()호출 - 정적바인딩
+		
+		// 하지만 실행해보면 자식(Spark)의 toString이 호출 되는것을 확인
+		// -> 컴파일 시에는 부모(Car)와 바인딩
+		// -> "실행 시" 에는 자식(Spark)의 오버라이딩 된 메서드와 바인딩 == 동적바인딩
 		
 		
 	}
