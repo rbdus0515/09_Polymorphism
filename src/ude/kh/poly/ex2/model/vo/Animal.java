@@ -100,8 +100,3 @@ public abstract class Animal {
 
 
 
-
-
-
-
-
